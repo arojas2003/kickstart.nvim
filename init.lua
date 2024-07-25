@@ -74,6 +74,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Disable line wrapping
+vim.opt.wrap = false
+
 -- Add a vertical column at 80 characters
 vim.opt.colorcolumn = '80'
 
