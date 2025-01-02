@@ -22,7 +22,7 @@ return {
 
     -- Sets <leader> ALT-<num> to replace <num> in Harpoon
     local keymap_set_replace_nav = function(num)
-      vim.keymap.set({ 'n', 'i', 'v' }, string.format('<leader><A-%d>', num), function()
+      vim.keymap.set('n', string.format('<leader><A-%d>', num), function()
         harpoon:list():replace_at(num)
       end, { desc = string.format('Harpoon: Replace file %d', num) })
     end
