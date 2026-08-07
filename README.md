@@ -85,13 +85,13 @@ it's recommended to track it in version control (see `:help vim.pack-lockfile`).
 
 > [!NOTE]
 > If following the recommended step above (i.e., creating your own repo from
-> the template or fork), replace `nvim-lua` with `<your_github_username>`
+> the template or fork), replace `arojas2003` with `<your_github_username>`
 > in the commands below
 
 <details><summary> Linux and Mac </summary>
 
 ```sh
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/arojas2003/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 </details>
@@ -101,13 +101,13 @@ git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HO
 If you're using `cmd.exe`:
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "%localappdata%\nvim"
+git clone https://github.com/arojas2003/kickstart.nvim.git "%localappdata%\nvim"
 ```
 
 If you're using `powershell.exe`
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${env:LOCALAPPDATA}\nvim"
+git clone https://github.com/arojas2003/kickstart.nvim.git "${env:LOCALAPPDATA}\nvim"
 ```
 
 </details>
