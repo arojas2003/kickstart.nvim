@@ -173,6 +173,9 @@ do
   vim.o.shiftwidth = 4
   vim.o.expandtab = true
 
+  -- Add a vertical column at 80 characters
+  vim.o.colorcolumn = '80'
+
   -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
   -- instead raise a dialog asking if you wish to save the current file(s)
   -- See `:help 'confirm'`
