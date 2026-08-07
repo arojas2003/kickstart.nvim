@@ -167,6 +167,9 @@ do
   -- Minimal number of screen lines to keep above and below the cursor.
   vim.o.scrolloff = 0
 
+  -- Disable line wrapping
+  vim.o.wrap = false
+
   -- Force tabs to be 4 spaces
   vim.o.tabstop = 4
   vim.o.softtabstop = 4
