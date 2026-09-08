@@ -692,7 +692,29 @@ do
   local servers = {
     clangd = {},
     -- gopls = {},
-    pyright = {},
+    pyright = {
+      before_init = function(_, config)
+        local python_path = os.getenv 'VIRTUAL_ENV'
+        if python_path then
+          python_path = python_path .. '/bin/python'
+        else
+          local root = config.root_dir
+          if not root then return end
+          for _, venv_name in ipairs { '.venv', 'venv' } do
+            local candidate = root .. '/' .. venv_name .. '/bin/python'
+            if vim.uv.fs_stat(candidate) then
+              python_path = candidate
+              break
+            end
+          end
+        end
+        if python_path then
+          config.settings = config.settings or {}
+          config.settings.python = config.settings.python or {}
+          config.settings.python.pythonPath = python_path
+        end
+      end,
+    },
     -- rust_analyzer = {},
     --
     -- Some languages (like typescript) have entire language plugins that can be useful:
